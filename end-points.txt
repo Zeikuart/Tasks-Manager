@@ -5,14 +5,19 @@ task: {
   label: {name: "UI/UX Design", color: "#F17EB8"},
   date: "20/05/21", // We could add the hour too...
   subTasks: [
-    {name: "First subtask", state: "Incomplete"},// Or numbers for the state
-    {name: "", state: ""}]
+    {name: "First subtask", state: "Incomplete"}, // Or numbers for the state
+    {name: "", state: ""}
+  ]
 }
 
 //**** Paths needed ****//
 
 // Get all Tasks
 // Edit single Task
-// Delete sintle Task
+// Edit Subtask
+// Delete single Task
+// Delete Subtask
 // Create a single Task
+// Create Subtasks
 // Change of Statement(Editing "state" key)
+// Search for a Task
