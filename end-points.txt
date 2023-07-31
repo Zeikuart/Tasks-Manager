@@ -1,0 +1,18 @@
+// Task Structure
+task: {
+  state: "Backlog", // We could use numbers as well: 0->Backlock
+  title: "Create the landing page",
+  label: {name: "UI/UX Design", color: "#F17EB8"},
+  date: "20/05/21", // We could add the hour too...
+  subTasks: [
+    {name: "First subtask", state: "Incomplete"},// Or numbers for the state
+    {name: "", state: ""}]
+}
+
+//**** Paths needed ****//
+
+// Get all Tasks
+// Edit single Task
+// Delete sintle Task
+// Create a single Task
+// Change of Statement(Editing "state" key)
