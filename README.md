@@ -22,6 +22,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 * Task Searching.
 * Filters.
 * Colored Labels.
+* HTTP Requests.
 * Responsive.
 
 ## Further help
