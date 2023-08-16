@@ -1,4 +1,15 @@
 /* Globals */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    * {
+        @apply p-0 m-0 box-border list-none outline-0 no-underline;
+        
+    }
+}
