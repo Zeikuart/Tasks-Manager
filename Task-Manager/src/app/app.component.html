@@ -1,2 +1,15 @@
-
-<router-outlet></router-outlet>
+<!-- Main Container -->
+<div class="main-container">
+    <!-- Header -->
+    <div class="header">
+        <app-header-view></app-header-view>
+    </div>
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <app-nav></app-nav>
+    </div>
+    <!-- Pages -->
+    <div class="main-section p-4 pt-20 h-screen bg-blue-300">
+        <router-outlet></router-outlet>
+    </div>
+</div>
