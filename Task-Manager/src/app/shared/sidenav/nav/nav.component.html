@@ -1,3 +1,5 @@
-<aside class="bg-purple-300">
-    <p>Nav</p>
+<aside class="font-inter">
+    <ul>
+        <app-nav-item *ngFor="let item of navItems; let i = index" [item]="item"></app-nav-item>
+    </ul>
 </aside>
