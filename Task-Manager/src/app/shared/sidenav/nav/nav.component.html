@@ -1,5 +1,14 @@
-<aside class="font-inter">
-    <ul>
-        <app-nav-item *ngFor="let item of navItems; let i = index" [item]="item"></app-nav-item>
-    </ul>
+<aside [class.hidden]="!sideNavState" class="font-inter w-64 h-screen border-r border-gray-200 fixed top-0 left-0 z-40 lg:block pt-32 transition-all duration-300">
+    <div class="h-full px-3 py-4 overflow-y-auto flex flex-col justify-between bg-white">
+        <!-- Top -->
+        <ul class="space-y-2">
+            <app-nav-item *ngFor="let item of navItems.top; let i = index" [item]="item"></app-nav-item>
+        </ul>
+        <!-- Bottom -->
+        <ul class="space-y-2 border-t py-6 mt-6 border-gray-200">
+            <app-nav-item *ngFor="let item of navItems.bottom; let i = index" [item]="item"></app-nav-item>
+        </ul>
+    </div>
 </aside>
+<!-- Backdrop -->
+<div [class.hidden]="!sideNavState" [class.lg:hidden]="desktop" (click)="closeSideNav()" class="opacity-25 fixed inset-0 bg-black"></div>

@@ -1,4 +1,5 @@
-export const navItems = [
+export const navItems = {
+  top: [
     { title: "Task Manager", 
       icon: "assets/icons.svg#task",
       link: "/task-manager",
@@ -15,4 +16,17 @@ export const navItems = [
       isActive: false
     },
     // Add more if needed
+  ],
+  bottom: [
+    { title: "Help",
+      icon: "assets/icons.svg#help",
+      link: "/help",
+      isActive: false
+    },
+    { title: "Documents",
+      icon: "assets/icons.svg#settings",
+      link: "/settings",
+      isActive: false
+    },
   ]
+}
