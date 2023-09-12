@@ -13,6 +13,7 @@ export class NavItemComponent {
 
   // Getting the route from nav
   @Input() routerLink: string = ""
+  // Getting the nav item
   @Input() item!: { 
     title: string
     icon: string

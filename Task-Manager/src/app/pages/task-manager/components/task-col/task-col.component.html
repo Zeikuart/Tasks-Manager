@@ -1,1 +1,10 @@
-<p>task-col works!</p>
+<div class="px-3 py-4 bg-gray-100 rounded-xl">
+    <div class="flex flex-col gap-4">
+        <!-- Tasks -->
+        <div class="flex flex-col gap-4">
+            <app-task *ngFor="let task of tasksList; let i = index" [task]="task"></app-task>
+        </div>
+        <!-- Add New Task Button -->
+        <app-new-task-btn></app-new-task-btn>
+    </div>
+</div>
