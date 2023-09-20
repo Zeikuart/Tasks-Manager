@@ -12,9 +12,9 @@
         </button>
     </div>
     <!-- Phone Menu -->
-    <app-phone-menu [menuItems]="menuItems" class="lg:hidden"></app-phone-menu>
+    <app-phone-menu [menuItems]="menuItems" (selectedOptionMenu)="loadColComponent($event)" class="lg:hidden"></app-phone-menu>
     <!-- Task Columns -->
     <section>
-        <app-task-col [tasksList]="tasksList"></app-task-col>
+        <ng-template appDynamicComponent></ng-template>       
     </section>
 </div>

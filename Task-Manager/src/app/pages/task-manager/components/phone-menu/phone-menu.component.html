@@ -1,7 +1,7 @@
 <div class="p-3 w-full bg-gray-100 rounded-xl">
     <ul class="flex items-center justify-between font-semibold text-gray-400">
         <!-- Backlog -->
-        <app-col-title [item]="menuItems[0]"></app-col-title>
+        <app-col-title [item]="menuItems[0]" (click)="selectedOption('backLog', 0)"></app-col-title>
         <li>
             <div class="lg:hidden text-gray-100">
                 <svg width="1" height="28" viewBox="0 0 1 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +10,7 @@
             </div>
         </li>
         <!-- In progress -->
-        <app-col-title [item]="menuItems[1]"></app-col-title>
+        <app-col-title [item]="menuItems[1]" (click)="selectedOption('inProgress', 1)"></app-col-title>
         <li>
             <div class="lg:hidden text-gray-100">
                 <svg width="1" height="28" viewBox="0 0 1 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,6 +19,6 @@
             </div>
         </li>
         <!-- Done -->
-        <app-col-title [item]="menuItems[2]"></app-col-title>
+        <app-col-title [item]="menuItems[2]" (click)="selectedOption('done', 2)"></app-col-title>
     </ul>
 </div>

@@ -1,6 +1,6 @@
 <li class="flex items-center text-center gap-1">
     <!-- Menu title -->
-    <a [ngClass]="item.isActive? 'text-gray-800' : 'text-gray-400'" href="#">{{item.title}}</a>
+    <button type="button" [ngClass]="item.isActive? 'text-gray-800' : 'text-gray-400'">{{item.title}}</button>
     <!-- Badge -->
     <div [ngClass]="item.isActive? 'bg-blueV4' : 'bg-gray-300'" class="flex items-center justify-center w-5 h-5 font-semibold text-white border-white rounded-full">{{item.value}}</div>
 </li>

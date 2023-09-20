@@ -2,7 +2,7 @@
     <div class="flex flex-col gap-4">
         <!-- Tasks -->
         <div class="flex flex-col gap-4">
-            <app-task *ngFor="let task of tasksList; let i = index" [task]="task"></app-task>
+            <app-task *ngFor="let task of tasks; let i = index" [task]="task"></app-task>
         </div>
         <!-- Add New Task Button -->
         <app-new-task-btn></app-new-task-btn>

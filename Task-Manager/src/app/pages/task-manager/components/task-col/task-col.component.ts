@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewTaskBtnComponent } from '../new-task-btn/new-task-btn.component';
 import { TaskComponent } from '../task/task.component';
@@ -9,9 +9,9 @@ import { TaskComponent } from '../task/task.component';
   imports: [CommonModule, NewTaskBtnComponent, TaskComponent],
   templateUrl: './task-col.component.html'
 })
-export class TaskColComponent {
+export class TaskColComponent implements OnInit{
 
-  @Input() tasksList!: {
+  @Input() tasks!: {
       taskName: string
       tag: {
         hasTag: boolean
@@ -22,4 +22,8 @@ export class TaskColComponent {
       progress: string
       date: string
   }[]
+
+  ngOnInit(): void {
+    console.log("List from col: ", this.tasks)
+  }
 }
