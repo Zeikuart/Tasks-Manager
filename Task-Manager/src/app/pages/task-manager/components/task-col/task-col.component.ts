@@ -12,18 +12,23 @@ import { TaskComponent } from '../task/task.component';
 export class TaskColComponent implements OnInit{
 
   @Input() tasks!: {
-      taskName: string
-      tag: {
-        hasTag: boolean
-        tagName: string
-        tagColor: string
-        tagBackground: string
-      }
-      progress: string
-      date: string
+    id: number
+    cat: string
+    taskName: string
+    tag: {
+      hasTag: boolean
+      tagName: string
+      tagColor: string
+      tagBackground: string
+    }
+    progress: string
+    date: string
   }[]
+
+  constructor() {}
 
   ngOnInit(): void {
     console.log("List from col: ", this.tasks)
   }
+
 }

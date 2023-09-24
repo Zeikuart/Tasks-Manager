@@ -1,0 +1,42 @@
+<div class="relative">
+    <!-- Dots Dropdown -->
+    <div>
+        <button type="button" class="inline-block text-blueV4 rounded-full" (click)="triggerDropdown()" id="menu-button" aria-haspopup="true">
+            <span class="sr-only">Open dropdown</span>
+            <svg class="w-7 h-7 stroke-2" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" fill-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- Dropdown Options -->
+    <div *ngIf="isOpen" class="absolute right-0 z-20 origin-top-right px-3 py-4 rounded-lg bg-white shadow-lg border w-56 divide-y divide-gray-100" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+        <!-- Task Options -->
+        <ul class="space-y-2">
+            <li *ngFor="let item of dropdownItems.taskOptions; let i = index" (click)="action(i)">
+                <a class="group cursor-pointer flex items-center px-3 py-2 w-full rounded-lg transition duration-75 font-normal hover:bg-blueV1 text-gray-600">
+                    <!-- Icon -->
+                    <svg [ngClass]="isSubOpen && i == 2? 'rotate-90' : 'rotate-0'" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <use [attr.xlink:href]="item.icon"></use>
+                      </svg>
+                    <!-- Link -->
+                    <span class="flex-1 text-left ml-3 leading-6 group-hover:text-blueV4 whitespace-nowrap">{{item.title}}</span>
+                </a>
+            </li>
+        </ul>
+        <!-- To move options -->
+        <ul *ngIf="isSubOpen" class="space-y-2 ">
+           <ng-container *ngFor="let item of dropdownItems.toMoveOptions; let i = index">
+                <li *ngIf="item.title !== category">
+                    <a class="group cursor-pointer flex items-center px-3 py-2 w-full rounded-lg transition duration-75 font-normal hover:bg-blueV1 text-gray-600">
+                        <!-- Icon -->
+                        <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <use [attr.xlink:href]="item.icon"></use>
+                        </svg>
+                        <!-- Link -->
+                        <span class="flex-1 text-left ml-3 leading-6 group-hover:text-blueV4 whitespace-nowrap">{{item.title}}</span>
+                    </a>
+                </li>
+           </ng-container>
+        </ul>
+    </div>
+</div>

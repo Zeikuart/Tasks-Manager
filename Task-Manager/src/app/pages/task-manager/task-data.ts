@@ -34,6 +34,8 @@ export const menuItems = [
 export const tasksList = {
     backLog: [
         {
+            id: 1,
+            cat: "Backlog",
             taskName: "Create the landing page",
             tag: {
                 hasTag: true,
@@ -45,6 +47,8 @@ export const tasksList = {
             date: "20/05/2021",
         },
         {
+            id: 2,
+            cat: "Backlog",
             taskName: "Test API request",
             tag: {
                 hasTag: true,
@@ -56,6 +60,8 @@ export const tasksList = {
             date: "20/05/2021",
         },
         {
+            id: 3,
+            cat: "Backlog",
             taskName: "Fix SQL tables",
             tag: {
                 hasTag: true,
@@ -69,6 +75,8 @@ export const tasksList = {
     ],
     inProgress: [
         {
+            id: 4,
+            cat: "In progress",
             taskName: "Check css framework",
             tag: {
                 hasTag: true,
@@ -80,6 +88,8 @@ export const tasksList = {
             date: "20/05/2021",
         },
         {
+            id: 5,
+            cat: "In progress",
             taskName: "Prepare hostings",
             tag: {
                 hasTag: true,
@@ -94,6 +104,8 @@ export const tasksList = {
     ],
     done: [
         {
+            id: 6,
+            cat: "Done",
             taskName: "Change typography",
             tag: {
                 hasTag: true,
@@ -105,6 +117,8 @@ export const tasksList = {
             date: "20/05/2021",
         },
         {
+            id: 7,
+            cat: "Done",
             taskName: "Create more tables",
             tag: {
                 hasTag: true,
@@ -116,6 +130,8 @@ export const tasksList = {
             date: "20/05/2021",
         },
         {
+            id: 8,
+            cat: "Done",
             taskName: "Find a domain",
             tag: {
                 hasTag: true,
@@ -127,6 +143,8 @@ export const tasksList = {
             date: "20/05/2021",
         },
         {
+            id: 9,
+            cat: "Done",
             taskName: "Make a new database",
             tag: {
                 hasTag: true,

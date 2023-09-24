@@ -4,6 +4,7 @@ import { menuItems, tasksList} from '../task-data';
 import { PhoneMenuComponent } from '../components/phone-menu/phone-menu.component';
 import { TaskColComponent } from '../components/task-col/task-col.component';
 import { DynamicComponentDirective } from 'src/app/directives/dynamic-component.directive';
+import { DropdownService } from 'src/app/services/dropdown/dropdown.service';
 
 @Component({
   selector: 'app-task-manager-view',
@@ -20,6 +21,8 @@ export class TaskManagerViewComponent implements AfterViewInit {
   tasksList = tasksList
 
   tasks!: {
+    id: number
+    cat: string
     taskName: string
     tag: {
       hasTag: boolean
@@ -31,7 +34,7 @@ export class TaskManagerViewComponent implements AfterViewInit {
     date: string
   }[]
 
-  constructor(private cd:ChangeDetectorRef) {}
+  constructor(private cd:ChangeDetectorRef, private dropdownService: DropdownService) {}
 
   ngOnInit(): void {
     // Do http request here
@@ -50,6 +53,7 @@ export class TaskManagerViewComponent implements AfterViewInit {
 
   // Render column to be used in phone view
   loadColComponent(data: { menuOption: string, menuIndex: number } = { menuOption: "backLog", menuIndex: 0 }) {
+    this.dropdownService.emptyMenus()
     console.log("Getting this: ", data)
 
     const viewContainerRef = this.dynamic.viewContainerRef
@@ -86,6 +90,11 @@ export class TaskManagerViewComponent implements AfterViewInit {
         })
         break;
     }
+  }
+
+  close() {
+    const viewContainerRef = this.dynamic.viewContainerRef
+    viewContainerRef.clear()
   }
 }
 
